@@ -1,0 +1,121 @@
+/* Global Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #F7EFE5;
+    color: #674188;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* S'assurer que le corps prend toute la hauteur de la fenêtre */
+}
+
+header {
+    background-color: #674188;
+    padding: 25px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    text-align: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #F7EFE5;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+header nav a:hover {
+    color: #C8A1E0;
+}
+
+/* Resume Section */
+.container {
+    flex: 1; /* Prendre l'espace disponible */
+    padding: 30px 20px;
+}
+
+.section {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #674188;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #674188;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #674188;
+    color: #F7EFE5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #C8A1E0;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #674188;
+    color: #F7EFE5;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto; /* Pousser le footer vers le bas */
+}
+
+footer h6 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer .social-links i {
+    font-size: 1.5rem;
+    color: #F7EFE5;
+    transition: color 0.3s ease-in-out, transform 0.2s;
+}
+
+footer .social-links i:hover {
+    color: #C8A1E0;
+    transform: scale(1.2);
+}

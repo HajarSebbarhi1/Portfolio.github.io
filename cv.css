@@ -1,0 +1,185 @@
+/* Global Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Assure que l'ensemble de la page occupe 100% de la hauteur */
+    font-family: 'Arial', sans-serif;
+    background-color: #F7EFE5;
+    color: #674188;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Permet d'organiser les sections verticalement */
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #674188;
+    padding: 25px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #F7EFE5;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #C8A1E0;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(145deg, #674188, #C8A1E0);
+    color: #F7EFE5;
+    flex: 1; /* Fait en sorte que cette section s'étende pour occuper l'espace disponible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+.hero-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #F7EFE5;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #E2BFD9;
+}
+
+.hero .btn {
+    text-decoration: none;
+    background-color: #C8A1E0;
+    color: #F7EFE5;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.hero .btn:hover {
+    background-color: #674188;
+    transform: scale(1.05);
+}
+
+/* Footer (always at the bottom) */
+footer {
+    background-color: #674188;
+    color: #F7EFE5;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Permet une flexibilité si besoin */
+    bottom: 0;
+    width: 100%; /* Assure que le footer occupe toute la largeur */
+}
+
+footer h6 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer .social-links i {
+    font-size: 1.5rem;
+    color: #F7EFE5;
+    transition: color 0.3s ease-in-out, transform 0.2s;
+}
+
+footer .social-links i:hover {
+    color: #C8A1E0;
+    transform: scale(1.2);
+}
+
+/* Add keyframes for animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Apply animations */
+.navbar {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero h1 {
+    animation: slideIn 1s ease-in-out;
+}
+
+.hero p {
+    animation: slideIn 1.2s ease-in-out;
+}
+
+.hero .btn {
+    animation: pulse 2s infinite;
+}
+
+footer {
+    animation: fadeIn 1s ease-in-out;
+}
